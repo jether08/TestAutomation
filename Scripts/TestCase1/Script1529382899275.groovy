@@ -19,3 +19,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://supplyport4qa04.supplypro.com/Login.aspx')
+
+WebUI.setText(findTestObject('Login_OR/LoginPage_SupplySystem/input_txtUserName'), '-admin')
+
+WebUI.setText(findTestObject('Login_OR/LoginPage_SupplySystem/input_txtPassword'), 'admin')
+
+WebUI.setText(findTestObject('Login_OR/LoginPage_SupplySystem/input_txtCompanyCode'), 'spcs')
+
+WebUI.click(findTestObject('Login_OR/LoginPage_SupplySystem/input_btnLogin'))
+
+WebUI.closeBrowser()
+
